@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import os
 
 # Criar diretório para salvar os gráficos
@@ -194,18 +195,37 @@ def plot_psnr_comparison(
     )
     ax.set_xticks(x + width)
     ax.set_xticklabels(compression_methods_adjusted)
-    ax.legend(title="Tipo de Órgão")
+    legend1 = ax.legend(title="Tipo de Órgão", loc="upper right")  # Legenda para órgãos
 
     # Adicionar faixas de qualidade no eixo y e limitar a escala
-    plt.axhspan(40, 50, color="lightgreen", alpha=0.2, label="Zona Alta Qualidade")
-    plt.axhspan(30, 40, color="yellow", alpha=0.2, label="Zona Boa Qualidade")
-    plt.axhspan(20, 30, color="orange", alpha=0.2, label="Zona Qualidade Regular")
-    plt.axhspan(0, 20, color="red", alpha=0.2, label="Zona Baixa Qualidade")
+    plt.axhspan(40, 50, color="lightgreen", alpha=0.2)
+    plt.axhspan(30, 40, color="yellow", alpha=0.2)
+    plt.axhspan(20, 30, color="orange", alpha=0.2)
+    plt.axhspan(0, 20, color="red", alpha=0.2)
+
+    # Criar handles personalizados para a legenda das zonas de qualidade
+    high_quality = mpatches.Patch(
+        color="lightgreen", alpha=0.2, label="Zona Alta Qualidade"
+    )
+    good_quality = mpatches.Patch(color="yellow", alpha=0.2, label="Zona Boa Qualidade")
+    fair_quality = mpatches.Patch(
+        color="orange", alpha=0.2, label="Zona Qualidade Regular"
+    )
+    low_quality = mpatches.Patch(color="red", alpha=0.2, label="Zona Baixa Qualidade")
+
+    legend2 = plt.legend(
+        handles=[high_quality, good_quality, fair_quality, low_quality],
+        title="Zonas de Qualidade",
+        loc="lower right",
+    )
+
+    # Adicionar ambas as legendas
+    plt.gca().add_artist(legend1)
+    plt.gca().add_artist(legend2)
 
     plt.ylim(0, 50)  # Limitar o eixo Y até 50
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.legend(title="Zonas de Qualidade", loc="upper left")
     plt.savefig(f"{output_dir}/psnr_by_algorithm_and_organ.png")
     plt.close()
 
