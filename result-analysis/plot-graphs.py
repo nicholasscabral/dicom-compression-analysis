@@ -6,7 +6,7 @@ import matplotlib.patches as mpatches
 import os
 
 # Criar diretório para salvar os gráficos
-os.makedirs("./graphs", exist_ok=True)
+os.makedirs("./results", exist_ok=True)
 
 
 # Função para carregar e preparar os dados
@@ -246,7 +246,7 @@ compression_methods = [
 ]
 compression_methods_adjusted = ["PNG", "JPEG", "PCA-95", "PCA-97,5", "PCA-99"]
 colors = ["skyblue", "lightgreen", "pink", "orange", "lightgray"]
-output_dir = "./graphs"
+output_dir = "./results"
 
 # Gerar os gráficos no diretório especificado
 plot_pca_comparison(average_metrics, output_dir)

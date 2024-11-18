@@ -31,6 +31,16 @@ if __name__ == "__main__":
     path_breast = "/media/nicholas/files/tcc-cancer-images/breast-512x512"
     path_brain = "/media/nicholas/files/tcc-cancer-images/brain-512x512"
 
+    lung_example_path = (
+        "/media/nicholas/files/tcc-cancer-images/lung-512x512/0b37a48d_1-088.dcm"
+    )
+    breast_example_path = (
+        "/media/nicholas/files/tcc-cancer-images/breast-512x512/00fc1710_1-0662.dcm"
+    )
+    brain_example_path = (
+        "/media/nicholas/files/tcc-cancer-images/brain-512x512/1ddd7121_1-064.dcm"
+    )
+
     commands = [
         # PNG compression
         ["python3", "algorithms/png.py", path_lung],
@@ -56,6 +66,10 @@ if __name__ == "__main__":
         ["python3", "result-analysis/mse-psnr.py"],
         # Plot graphs
         ["python3", "result-analysis/plot-graphs.py"],
+        # Generate result images
+        ["python3", "result-analysis/generate-result-image.py", lung_example_path],
+        ["python3", "result-analysis/generate-result-image.py", breast_example_path],
+        ["python3", "result-analysis/generate-result-image.py", brain_example_path],
     ]
 
     run_commands_sequentially(commands)
