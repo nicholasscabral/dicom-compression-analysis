@@ -1,0 +1,61 @@
+\changetocdepth {4}
+\babel@toc {brazil}{}\relax 
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Introdução}}{14}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Definição do Problema}{14}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Motivação e Relevância}{14}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos}{15}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Objetivos Específicos}{15}{subsection.1.3.1}%
+\contentsline {section}{\numberline {1.4}Questões de Pesquisa}{15}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Organização do Trabalho}{16}{section.1.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Fundamentação Teórica}}{18}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Compressão de Dados}{18}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Taxa de compressão}{19}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Compressão sem perda}{19}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Compressão com perda}{20}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Entropia}{21}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}\acrfull {DCT}}{22}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Quantização}{23}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}\acrfull {RGB} vs Escala de cinza (Grayscale)}{24}{subsection.2.1.7}%
+\contentsline {section}{\numberline {2.2}\acrfull {DICOM}}{25}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Algoritmo de Huffman}{27}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Algoritmos de compressão de imagens}{30}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}\acrfull {PNG}}{30}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}\acrfull {JPEG}}{33}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}\acrfull {PCA}}{35}{subsection.2.4.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalhos Relacionados}}{37}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Processos de Compressão de Dados Aplicados a Imagens Médicas}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Compressão de Imagens Mamográficas Utilizando Segmentação e o Algoritmo \acrshort {PPM}}{37}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Utilização da Análise de Componentes Principais na compressão de imagens digitais}{38}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Compressão de imagens com transmissão em tempo real}{39}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Projeto de Arquiteturas Integradas para a compressão de imagens \acrshort {JPEG}}{39}{section.3.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Metodologia}}{41}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Base de dados}{41}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Classificação das imagens}{41}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Transfer Syntax UID}{42}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Definição dos cenários}{44}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Pré-processamento}{44}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Processamento}{44}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Avaliação da Qualidade das Imagens}{45}{subsection.4.2.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Resultados}}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Comparação Visual das Imagens}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Taxas de Compressão}{50}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Taxas de Compressão por Método}{51}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}\acrshort {PNG}}{51}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}\acrshort {JPEG}}{52}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}\acrshort {PCA}}{53}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Análise de Qualidade Aparente (\acrshort {PSNR})}{54}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Discussão dos Resultados}{55}{section.5.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Conclusão}}{57}{chapter.6}%
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {chapter}{\MakeTextUppercase {Refer\^encias}}{59}{section*.32}%

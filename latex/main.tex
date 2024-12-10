@@ -1,0 +1,109 @@
+\input{lib/preambulo}
+
+\trabalhoacademico{tccgraduacao}
+
+\removerbordasdohyperlink{sim}
+
+\cordohyperlink{nao}
+
+\ies{Universidade de Fortaleza}
+\iessigla{UNIFOR}
+\centro{Centro de Ciências Tecnológicas}
+
+\graduacaoem{Ciência da Computação}
+\habilitacao{bacharel}
+
+\autor{NICHOLAS MESQUITA CABRAL DOS ANJOS}
+\titulo{Análise de desempenho de algoritmos de compressão de imagens em ambientes hospitalares}
+\data{2024}
+\local{Fortaleza -- Ceará}
+
+\dataaprovacao{01 de Dezembro de 2020}
+
+\orientador{Prof. Dr. Napoleão Vieira Nepomuceno}
+\orientadories{Universidade de Fortaleza - UNIFOR}
+\orientadorcentro{Centro de Ciências Tecnológicas - CCT}
+\orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+
+\coorientador{}
+\coorientadories{Universidade Co-orientador - SIGLA}
+\coorientadorcentro{Centro do Co-orientador - SIGLA}
+\coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+
+\membrodabancadois{Membro da Banca Dois}
+\membrodabancadoiscentro{Centro de Ciências e Tecnologia - CCT}
+\membrodabancadoisies{Universidade do Membro da Banca Dois - SIGLA}
+
+\membrodabancatres{Membro da Banca Três}
+\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
+\membrodabancatresies{Universidade do Membro da Banca Três - SIGLA}
+
+% \usepackage{graphicx}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+% \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% \graphicspath{{./images/}}
+% \usepackage[breaklinks=true]{hyperref}
+\usepackage{url}
+
+\begin{document}
+
+
+	\imprimircapa
+	\imprimirfolhaderosto{}
+	\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
+%	\imprimirerrata{elementos-pre-textuais/errata}
+
+	%%		Após a defesa do TCC, a banca examinadora irá preencher a folha de aprovação,	que deverá ser assinada por todos os membros da banca avaliadora e, posteriormente,	deverá ser anexada na versão final do TCC pelo ALUNO.									
+	%%		Quando tiver em mãos a folha de aprovação:
+	%%			1 - Escanei-a e gere um arquivo PDF													%%
+	%%			2 - Renomeie o arquivo PDF para "folha-aprovacao.pdf"								%%
+	%%			3 - Mova o arquivo para o diretório "elementos-pre-textuais" do modelo				%%
+	%%			5 - Descomente a linha \includepdf{elementos-pre-textuais/folha-aprovacao.pdf} 		%%
+	%%					removendo o simbolo de %													%%
+	%%			6 - Adicione o simbolo % na linha 	\imprimirfolhadeaprovacao						%%
+	%%			7 - Recompile o projeto																%%
+	%%																								%%	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\includepdf{elementos-pre-textuais/folha-aprovacao.pdf}
+	% \imprimirfolhadeaprovacao
+	
+	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
+	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+	% \imprimirepigrafe{elementos-pre-textuais/epigrafe}
+	\imprimirresumo{elementos-pre-textuais/resumo}
+	\imprimirabstract{elementos-pre-textuais/abstract}
+	\imprimirlistadeilustracoes
+	% \imprimirlistadetabelas
+	\imprimirlistadequadros
+	\imprimirlistadealgoritmos
+	% \imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}
+	\imprimirsumario
+
+	% Elementos textuais
+	\textual
+	% \input{elementos-textuais/introducao}
+	\input{elementos-textuais/fundamentacao-teorica}
+	\input{elementos-textuais/trabalhos-relacionados}
+	\input{elementos-textuais/metodologia}
+	% \input{elementos-textuais/resultados}
+	% \input{elementos-textuais/conclusao}
+
+	%Elementos pós-textuais
+	\bibliography{elementos-pos-textuais/referencias}
+	%\imprimirglossario
+    % \imprimirapendices
+	% Adicione aqui os apendices do seu trabalho
+		% \input{elementos-pos-textuais/apendices/Algoritmo}
+		% \input{elementos-pos-textuais/apendices/Entradas}
+		% \input{elementos-pos-textuais/apendices/EntradaVoos}
+		% \input{elementos-pos-textuais/apendices/Resultados}
+%	\imprimiranexos
+		% Adicione aqui os anexos do seu trabalho
+%		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}
+%		\input{elementos-pos-textuais/anexos/dinamica-das-classes-sociais}
+%	\imprimirindice
+
+\end{document}

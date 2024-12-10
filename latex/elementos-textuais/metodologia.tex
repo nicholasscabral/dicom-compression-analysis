@@ -1,0 +1,149 @@
+\chapter{Metodologia}
+\label{cap:metod}
+
+Neste capítulo, será detalhada a abordagem metodológica adotada para investigar  o desempenho dos algoritmos de compressão de imagem \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA} no contexto de imagens de tomografia no formato \acrshort{DICOM}. A metodologia empregada busca não apenas comparar as taxas de compressão, mas também avaliar o impacto dessa compressão na qualidade das imagens. Para tanto, cada etapa do processo será minuciosamente descrita, desde a coleta e pré-processamento dos dados até a aplicação dos algoritmos de compressão e a análise dos resultados. O foco está em estabelecer uma compreensão clara e fundamentada das vantagens e limitações de cada método em cenários hospitalares.
+
+\section{Base de dados}
+\label{metod:dados}
+
+Neste estudo, as imagens de tomografia foram obtidas do \acrfull{TCIA}, uma vasta coleção de imagens médicas voltada para pesquisas em oncologia. o \acrshort{TCIA} é um recurso público que disponibiliza imagens de alta qualidade, incluindo tomografias computadorizadas, ressonâncias magnéticas, e outros exames, coletados de pacientes com diversos tipos de câncer. O banco de dados é amplamente utilizado para pesquisas acadêmicas e desenvolvimento de algoritmos de análise de imagem.
+
+O \acrshort{TCIA} é uma parte do \acrfull{NBIA}, uma iniciativa do \acrfull{NIH} dos Estados Unidos. o \acrshort{NBIA} foi criado para facilitar o compartilhamento de imagens biomédicas para pesquisa, oferecendo uma plataforma segura e padronizada para o armazenamento e disseminação de imagens médicas. A integração do \acrshort{TCIA} ao \acrshort{NBIA} garante que as imagens disponibilizadas estejam dentro dos padrões de qualidade e anonimidade exigidos para pesquisas científicas.
+
+\subsection{Classificação das imagens}
+Para este estudo, foram selecionadas 15.000 imagens de tomografia computadorizada provenientes de diferentes coleções de imagens do \acrfull{TCIA}, todas no formato \acrshort{DICOM}. A seleção das imagens foi realizada com base em um critério específico: de cada coleção, foram escolhidas 5.000 imagens com a mesma resolução. Essas imagens foram agrupadas em três tipos de câncer distintos, permitindo uma análise comparativa entre eles. Importante ressaltar que as imagens selecionadas não possuíam compressão prévia, o que garantiu a integridade dos dados para os testes de compressão realizados, mas esse aspecto será detalhado mais adiante. Os três tipos de câncer selecionados foram:
+
+\begin{itemize}
+    \item \textbf{Câncer de Mama}: As 5.000 imagens de câncer de mama foram adquiridas da coleção \acrfull{EA1141} \cite{breastCancerCollection}, disponível no The Cancer Imaging Archive em \url{https://www.cancerimagingarchive.net/collection/ea1141}. As imagens de mama geralmente contêm uma proporção significativa de tecido denso e menos espaços vazios, o que pode dificultar a compressão em relação a outros órgãos.
+
+    \item \textbf{Câncer de Pulmão}: Foram selecionadas 5.000 imagens de tomografia computadorizada da coleção \acrfull{NSCLC} \cite{lungCancerCollection}, disponível no The Cancer Imaging Archive em \url{https://www.cancerimagingarchive.net/collection/nsclc-radiomics}. O pulmão, por sua anatomia, possui grandes espaços de ar, o que pode facilitar a compressão devido à presença de áreas de baixa densidade.
+    
+    \item \textbf{Câncer Cerebral}: As 5.000 imagens de câncer cerebral foram adquiridas da coleção \acrfull{REMIND} \cite{brainCancerCollection}, disponível no The Cancer Imaging Archive em \url{https://www.cancerimagingarchive.net/collection/remind}. O cérebro, por ser um órgão com alta densidade de estruturas e pouca presença de espaço vazio, pode apresentar um comportamento de compressão distinto em comparação com os pulmões.
+\end{itemize}
+
+A escolha de diferentes tipos de câncer foi feita com o intuito de testar a eficácia dos métodos de compressão em órgãos com tamanhos e disposições espaciais variáveis. A presença de diferentes proporções de espaços vazios, como os encontrados no pulmão em comparação com o cérebro, permite uma análise comparativa mais robusta, uma vez que a densidade e a estrutura de cada órgão podem impactar diretamente nas taxas de compressão. Essa diversidade de imagens é essencial para verificar o comportamento dos algoritmos de compressão (\acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA}) em cenários distintos, fornecendo uma visão ampla sobre a aplicabilidade desses métodos em ambientes hospitalares com uma variedade de exames de imagem.
+
+\subsection{Transfer Syntax UID}
+O campo \textit{Transfer Syntax UID} dentro de um arquivo DICOM é utilizado para definir o método de codificação dos dados da imagem, incluindo se há ou não compressão. As três coleções de imagens utilizadas não especificam se as imagens fornecidas possuem ou não compressão, então, para garantir que as imagens utilizadas neste estudo não estivessem previamente comprimidas, foi executado um script (desenvolvido pelo autor) para verificar os \textit{Transfer Syntax UIDs} associados a cada arquivo DICOM.
+
+Abaixo estão descritos alguns dos principais UIDs utilizados em arquivos DICOM para imagens comprimidas e não comprimidas:
+
+\noindent \textbf{Imagens sem compressão}
+Imagens DICOM que não passaram por compressão podem ser identificadas pelos seguintes UIDs:
+
+\begin{itemize}
+    \item \textbf{1.2.840.10008.1.2} – Implicit VR Little Endian: formato não comprimido, codificado com \textit{Little Endian} e sem representação explícita de VR (Value Representation).
+    \item \textbf{1.2.840.10008.1.2.1} – Explicit VR Little Endian: formato não comprimido, codificado com \textit{Little Endian}, e com representação explícita de VR.
+    \item \textbf{1.2.840.10008.1.2.2} – Explicit VR Big Endian: formato não comprimido, codificado com \textit{Big Endian}, e com representação explícita de VR.
+\end{itemize}
+
+\noindent \textbf{Imagens com compressão}
+Para imagens que foram comprimidas, diferentes UIDs são utilizados, dependendo do tipo de compressão aplicada. Abaixo estão alguns dos UIDs mais comuns para compressão:
+
+\begin{itemize}
+    \item \textbf{1.2.840.10008.1.2.4.50} – JPEG Baseline (Processo 1): compressão JPEG com perdas.
+    \item \textbf{1.2.840.10008.1.2.4.51} – JPEG Extended (Processos 2 e 4): compressão JPEG com perdas estendida.
+    \item \textbf{1.2.840.10008.1.2.4.57} – JPEG Lossless (Processo 14, Seleção de Hierarquia de Previsão 1): compressão JPEG sem perdas.
+    \item \textbf{1.2.840.10008.1.2.4.70} – JPEG Lossless (Processo 14): compressão JPEG sem perdas.
+    \item \textbf{1.2.840.10008.1.2.4.80} – JPEG-LS Lossless Image Compression: compressão JPEG-LS sem perdas.
+    \item \textbf{1.2.840.10008.1.2.4.81} – JPEG-LS Near-Lossless Image Compression: compressão JPEG-LS com perdas leves.
+    \item \textbf{1.2.840.10008.1.2.4.90} – JPEG 2000 Lossless: compressão JPEG 2000 sem perdas.
+    \item \textbf{1.2.840.10008.1.2.4.91} – JPEG 2000 com perdas: compressão JPEG 2000 com perdas.
+    \item \textbf{1.2.840.10008.1.2.5} – RLE (Run-Length Encoding): compressão RLE, um método de compressão sem perdas.
+    \item \textbf{1.2.840.10008.1.2.6.1} – Deflated Explicit VR Little Endian: compressão deflacionada para dados explícitos \textit{Little Endian}.
+    \item \textbf{1.2.840.10008.1.2.1.99} – Deflated Explicit VR Little Endian: compressão baseada no método \textit{zlib} (sem perdas).
+\end{itemize}
+
+Esses UIDs são essenciais para verificar a presença ou ausência de compressão em imagens médicas \cite{DICOMTransferSyntax}. No presente estudo, as imagens utilizadas foram verificadas para garantir que não houvesse compressão anterior à aplicação dos métodos de compressão propostos (\acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA}), utilizando o \textit{Transfer Syntax UID} \textbf{1.2.840.10008.1.2} (Implicit VR Little Endian) para imagens sem compressão.
+
+\section{Definição dos cenários}
+
+% IMAGENS CANCER DE PULMAO
+% https://www.cancerimagingarchive.net/collection/cmb-lca/ licença CC BY 4.0 
+% LungCT-Diagnosis 61
+% TCGA-LUAD 31
+
+% IMAGENS CANCER DE CEREBRO
+% https://www.cancerimagingarchive.net/collection/vestibular-schwannoma-mc-rc/  licença CC BY 4.0 
+
+
+\subsection{Filtragem de dados}
+
+Para cada tipo de órgão (pulmão, mama e cérebro), foi executado um script para filtrar as imagens DICOM que não estavam comprimidas, ou seja, aquelas cujo valor do \textit{Transfer Syntax UID} correspondia a um dos mencionados no tópico anterior. Este filtro assegurou que somente imagens sem compressão fossem consideradas para o estudo, permitindo uma avaliação precisa do impacto dos algoritmos de compressão aplicados.
+
+Em seguida, dentre as imagens não comprimidas, foram selecionadas aquelas com resolução de $512 \times 512$ pixels. A escolha desta resolução se justifica por ser uma das mais comuns em imagens de tomografia computadorizada, garantindo uniformidade nos dados e facilitando a comparação entre os resultados dos diferentes algoritmos. Além disso, esta resolução oferece um equilíbrio adequado entre detalhamento da imagem e tamanho do arquivo \cite{hsieh2009computedDicomResolution512}, aspecto relevante para o armazenamento em sistemas hospitalares.
+
+Após o processo de filtragem, foi obtido um conjunto de 5.000 imagens de cada órgão, todas com resolução de $512 \times 512$ pixels e sem compressão. Este conjunto de dados homogêneo serviu como base para a aplicação e avaliação dos algoritmos de compressão selecionados.
+
+\subsection{Processamento}
+
+Foram implementados três algoritmos de compressão de imagem utilizando a linguagem Python, devido à sua versatilidade e ampla adoção na área de processamento de imagens. Os formatos \acrshort{PNG} (sem perda) e \acrshort{JPEG} (com perda) foram processados com a biblioteca \textit{Pillow} \cite{pillowDocumentation}, escolhida pela sua facilidade e eficiência na manipulação de imagens. Já o algoritmo \acrshort{PCA} (Análise de Componentes Principais, com perda) foi implementado com a \textit{scikit-learn} \cite{sklearnDocumentation}, graças ao seu suporte robusto para técnicas estatísticas e algoritmos de redução de dimensionalidade.
+
+Antes da compressão, todas as imagens foram normalizadas para o formato \texttt{uint8}, com pixels no intervalo de 0 a 255. Esta normalização é fundamental para padronizar os dados de entrada dos algoritmos de compressão e assegurar que diferenças de escala não influenciem os resultados. Além disso, o formato \texttt{uint8} é amplamente utilizado em processamento de imagens, otimizando o desempenho computacional e o uso de memória \cite{digitalImageProcessingGonzalez}.
+
+No caso do \acrshort{PCA}, o algoritmo foi parametrizado pela porcentagem de variância explicada, utilizando valores de 95\%, 97,5\% e 99\%. Foi optado por parametrizar desta forma ao invés de especificar o número de componentes principais, pois em imagens médicas em tons de cinza, frequentemente apenas um componente já captura a maior parte da variância (devido ao alto contraste entre regiões de interesse e o fundo). Isto é particularmente relevante em imagens de tomografia, que apresentam grandes áreas com pouca informação (espaço vazio), tornando a variância explicada um critério mais adequado para determinar a quantidade de informação retida.
+
+As imagens comprimidas pelo \acrshort{PCA} foram armazenadas no formato \texttt{npz}, que permite salvar arrays NumPy \cite{numpyDocumentation} de forma compacta e eficiente. Neste formato, foram armazenados a imagem comprimida (projeções nos componentes principais), os componentes principais (matriz de carregamentos) e a média utilizada no processo de centralização dos dados. O uso do \texttt{npz} facilita o armazenamento e a recuperação dos dados necessários para reconstruir as imagens, além de ser um formato otimizado para operações com arrays numéricos.
+
+\subsection{Avaliação da Qualidade das Imagens}
+
+Para medir a qualidade aparente das imagens após a compressão, cada imagem comprimida foi comparada com sua correspondente original. Foi calculado o \acrfull{MSE} entre as duas imagens e, a partir deste valor, foi obtido o \acrfull{PSNR}. O \acrshort{PSNR} é uma métrica amplamente utilizada para quantificar a qualidade de reconstrução em imagens comprimidas, onde valores mais altos indicam maior fidelidade em relação à imagem original.
+
+As faixas de qualidade do \acrshort{PSNR} são interpretadas da seguinte forma:
+
+\begin{itemize}
+    \item Acima de 40 dB: qualidade excelente, diferenças imperceptíveis ao olho humano.
+    \item Entre 30 e 40 dB: qualidade boa, diferenças mínimas percebidas.
+    \item Entre 20 e 30 dB: qualidade razoável, diferenças perceptíveis.
+    \item Abaixo de 20 dB: qualidade baixa, perda significativa de detalhes.
+\end{itemize}
+
+% \subsection{Análise de Resultados - REMOVER}
+
+% A partir dos dados compilados na planilha, foram gerados diversos gráficos para visualizar e comparar o desempenho dos algoritmos de compressão em diferentes cenários. Os gráficos produzidos foram:
+
+% \begin{itemize}
+%     \item \textbf{pca\_comparison}: comparação dos níveis de compressão e qualidade para os diferentes percentuais de variância explicada no PCA.
+%     \item \textbf{jpeg\_comparison}: análise do desempenho do JPEG em termos de taxa de compressão e PSNR.
+%     \item \textbf{png\_comparison}: avaliação da eficiência do PNG na compressão sem perda.
+%     \item \textbf{psnr\_comparison}: comparação geral dos valores de\acrshort{PSNR}obtidos pelos três algoritmos.
+%     \item \textbf{compression\_comparison}: análise comparativa dos tamanhos dos arquivos comprimidos por cada algoritmo.
+% \end{itemize}
+
+% Esses gráficos permitiram identificar as vantagens e limitações de cada método, auxiliando na escolha de algoritmos de compressão que equilibram eficiência de armazenamento e integridade dos dados em sistemas hospitalares de grande escala.
+
+\begin{quadro}[h!]
+    \centering
+    \Caption{\label{qua:metodologia_detalhada} Resumo detalhado das etapas da metodologia.}
+    \UNIFORqua{}{
+        \begin{tabular}{|c|p{12cm}|}
+            \hline
+            \textbf{Etapa} & \textbf{Descrição} \\
+            \hline
+            Filtro de Imagens DICOM & Seleção das imagens sem compressão utilizando o \textit{Transfer Syntax UID} como critério de filtragem. \\
+            \hline
+            Filtragem por Resolução & Seleção de imagens com resolução de $512 \times 512$ pixels, garantindo uniformidade nos dados. \\
+            \hline
+            Normalização dos Dados & Conversão das imagens para o formato \texttt{uint8}, ajustando os valores dos pixels para o intervalo de 0 a 255. \\
+            \hline
+            Compressão com PNG & Aplicação do algoritmo PNG, garantindo compressão sem perda de qualidade. \\
+            \hline
+            Compressão com JPEG & Aplicação do algoritmo JPEG, obtendo altas taxas de compressão com perda controlada. \\
+            \hline
+            Compressão com PCA & Aplicação do algoritmo PCA, utilizando percentuais de variância explicada (95\%, 97,5\% e 99\%). \\
+            \hline
+            Armazenamento PCA & Salvamento dos resultados do PCA no formato \texttt{npz}, incluindo a imagem comprimida, componentes principais e média. \\
+            \hline
+            Avaliação da Qualidade & Cálculo do MSE e do \acrshort{PSNR} para comparar as imagens comprimidas com as originais. \\
+            \hline
+            Registro de Resultados & Organização dos dados em planilhas contendo valores de MSE, \acrshort{PSNR} e taxas de compressão. \\
+            \hline
+            Geração de Gráficos & Criação de gráficos comparativos das taxas de compressão e PSNR, segmentados por órgão e algoritmo. \\
+            \hline
+        \end{tabular}
+    }{
+        \Fonte{Elaborado pelo autor.}
+    }
+\end{quadro}
+
+

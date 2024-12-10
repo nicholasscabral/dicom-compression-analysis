@@ -1,0 +1,230 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Aerts \textit{et al.} 2014]{lungCancerCollection}
+\abntrefinfo{Aerts \textit{et al.}}{AERTS \textit{et al.}}{2014}
+{AERTS, H. J. W.~L.; WEE, L.; VELAZQUEZ, E. R.; LEIJENAAR, R. T.~H.; PARMAR,
+  C.; GROSSMANN, P.; CARVALHO, S.; BUSSINK, J.; MONSHOUWER, R.; HAIBE-KAINS,
+  B.; RIETVELD, D.; HOEBERS, F.; RIETBERGEN, M.~M.; LEEMANS, C.~R.; DEKKER, A.;
+  QUACKENBUSH, J.; GILLIES, R.~J.; LAMBIN, P. \textbf{Data From NSCLC-Radiomics
+  (version 4)}. The Cancer Imaging Archive, 2014.
+Dispon{\'\i}vel em: \url{https://doi.org/10.7937/K9/TCIA.2015.PF0M9REI}.}
+
+\bibitem[Agostini 2002]{agostini2002JPEGArch}
+\abntrefinfo{Agostini}{AGOSTINI}{2002}
+{AGOSTINI, L.~V.
+\textbf{Projeto de arquiteturas integradas para a compressão de imagens JPEG}.
+Disserta\c{c}\~{a}o (Mestrado) --- Universidade Federal do Rio Grande do Sul.
+  Instituto de Informática. Programa de Pós-Graduação em Computação,
+  2002.
+Dispon{\'\i}vel em: \url{https://lume.ufrgs.br/handle/10183/11431}.}
+
+\bibitem[Anon 2024]{imagePNGCompression}
+\abntrefinfo{Anon}{ANON}{2024}
+{ANON. \textbf{Lossless Compression - Lossy and Lossless}. 2024.
+[Online; accessed 5-June-2024].
+Dispon{\'\i}vel em:
+  \url{https://lossyandlossless.weebly.com/lossless-compression.html}.}
+
+\bibitem[Biradar e Makandar 2022]{imageLossyVsLossless}
+\abntrefinfo{Biradar e Makandar}{BIRADAR; MAKANDAR}{2022}
+{BIRADAR, R.; MAKANDAR, A. Analysis of 3d medical image compression.
+\textbf{International Research Journal of Modernization in Engineering
+  Technology and Science}, IRJMETS, v.~4, n.~12, p.~9, 2022.
+Dispon{\'\i}vel em:
+  \url{https://www.irjmets.com/uploadedfiles/paper/issue\_12\_december\_2022/31876/final/fin\_irjmets1670230344.pdf}.}
+
+\bibitem[Chaudhary \textit{et al.} 2021]{imageCompressionExample}
+\abntrefinfo{Chaudhary \textit{et al.}}{CHAUDHARY \textit{et al.}}{2021}
+{CHAUDHARY, A.~K.; MEHROTRA, R.; ANSARI, M.~A.; TRIPATHI, P. A novel scheme for
+  medical image compression using huffman and dct techniques.
+Springer Singapore, Singapore, p. 289--300, 2021.}
+
+\bibitem[Clark e Contributors 2023]{pillowDocumentation}
+\abntrefinfo{Clark e Contributors}{CLARK; CONTRIBUTORS}{2023}
+{CLARK, A.; CONTRIBUTORS. \textbf{Pillow: The Friendly PIL Fork}. 2023.
+  \url{https://pillow.readthedocs.io/en/stable/}.}
+
+\bibitem[Comstock \textit{et al.} 2023]{breastCancerCollection}
+\abntrefinfo{Comstock \textit{et al.}}{COMSTOCK \textit{et al.}}{2023}
+{COMSTOCK, C.~E.; GATSONIS, C.; NEWSTEAD, G.~M.; SNYDER, B.~S.; GAREEN, I.~F.;
+  BERGIN, J.~T.; RAHBAR, H.; SUNG, J.~S.; JACOBS, C.; HARVEY, J.~A.; NICHOLSON,
+  M.~H.; WARD, R.~C.; HOLT, J.; PRATHER, A.; MILLER, K.~D.; SCHNALL, M.~D.;
+  KUHL, C.~K. \textbf{Abbreviated Breast MRI and Digital Tomosynthesis
+  Mammography in Screening Women With Dense Breasts (EA1141) (Version 1)}. The
+  Cancer Imaging Archive, 2023.
+Dispon{\'\i}vel em: \url{https://doi.org/10.7937/2BAS-HR33}.}
+
+\bibitem[Dillon e Goldstein 1984]{multivariateAnalysis}
+\abntrefinfo{Dillon e Goldstein}{DILLON; GOLDSTEIN}{1984}
+{DILLON, W.; GOLDSTEIN, M. \textbf{Multivariate Analysis: Methods and
+  Applications}. Wiley, 1984.  (Wiley Series in Probability and Statistics).
+ISBN 9780471083177. Dispon{\'\i}vel em:
+  \url{https://books.google.com.br/books?id=nrbvAAAAMAAJ}.}
+
+\bibitem[Dimililer 2022]{imageCompressionRate}
+\abntrefinfo{Dimililer}{DIMILILER}{2022}
+{DIMILILER, K. Dct-based medical image compression using machine learning.
+\textbf{Signal, Image and Video Processing}, v.~16, n.~1, p. 55--62, February
+  2022.
+Dispon{\'\i}vel em: \url{https://doi.org/10.1007/s11760-021-01951-0}.}
+
+\bibitem[Elakkiya e Thivya 2021]{compressionTechniquesElakkiya}
+\abntrefinfo{Elakkiya e Thivya}{ELAKKIYA; THIVYA}{2021}
+{ELAKKIYA, S.; THIVYA, K.~S. Comprehensive review on lossy and lossless
+  compression techniques.
+\textbf{Journal of The Institution of Engineers (India): Series B}, v.~103, p.
+  1003--1012, 2021.}
+
+\bibitem[Feofiloff 2018]{imeUspBinaryTrees}
+\abntrefinfo{Feofiloff}{FEOFILOFF}{2018}
+{FEOFILOFF, P. \textbf{Árvores bináriass}. Instituto de Matemática e
+  Estatística da Universidade de São Paulo (IME-USP), 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.ime.usp.br/~pf/algoritmos/aulas/bint.html}.}
+
+\bibitem[Gonzalez e Woods 2008]{digitalImageProcessingGonzalez}
+\abntrefinfo{Gonzalez e Woods}{GONZALEZ; WOODS}{2008}
+{GONZALEZ, R.~C.; WOODS, R.~E. \textbf{Digital Image Processing}. [S.l.]:
+  Pearson Education, 2008.}
+
+\bibitem[Harris \textit{et al.} 2020]{numpyDocumentation}
+\abntrefinfo{Harris \textit{et al.}}{HARRIS \textit{et al.}}{2020}
+{HARRIS, C.~R.; MILLMAN, K.~J.; WALT, S.~J. van~der; GOMMERS, R.; VIRTANEN, P.;
+  COURNAPEAU, D.; WIESER, E.; TAYLOR, J.; BERG, S.; SMITH, N.~J.; KERN, R.;
+  PICUS, M.; HOYER, S.; KERKWIJK, M.~H. van; BRETT, M.; HALDANE, A.; RíO, J.
+  Fernández~del; WIEBE, M.; PETERSON, P.; GéRARD-MARCHANT, P.; SHEPPARD, K.;
+  REDDY, T.; WECKESSER, W.; ABBASI, H.; GOHLKE, C.; OLIPHANT, T.~E.
+  \textbf{NumPy: The fundamental package for array computing with Python}.
+  2020. 357--362~p.
+Dispon{\'\i}vel em: \url{https://numpy.org/doc/stable/}.}
+
+\bibitem[Hsieh 2003]{hsieh2009computedDicomResolution512}
+\abntrefinfo{Hsieh}{HSIEH}{2003}
+{HSIEH, J. Computed tomography: principles, design, artifacts, and recent
+  advances.
+SPIE press, 2003.}
+
+\bibitem[Huffman 1952]{huffmanArticle}
+\abntrefinfo{Huffman}{HUFFMAN}{1952}
+{HUFFMAN, D.~A. A method for the construction of minimum-redundancy codes.
+\textbf{Proceedings of the IRE}, v.~40, n.~9, p. 1098--1101, 1952.
+Dispon{\'\i}vel em:
+  \url{https://compression.ru/download/articles/huff/huffman\_1952\_minimum-redundancy-codes.pdf}.}
+
+\bibitem[Javatpoint 2021]{imageHuffmanTree}
+\abntrefinfo{Javatpoint}{JAVATPOINT}{2021}
+{JAVATPOINT. \textbf{Huffman Coding using Python - Javatpoint}. 2021.
+Dispon{\'\i}vel em:
+  \url{https://www.javatpoint.com/huffman-coding-using-python}.}
+
+\bibitem[Juvekar \textit{et al.} 2023]{brainCancerCollection}
+\abntrefinfo{Juvekar \textit{et al.}}{JUVEKAR \textit{et al.}}{2023}
+{JUVEKAR, P.; DORENT, R.; KöGL, F.; TORIO, E.; BARR, C.; RIGOLO, L.; GALVIN,
+  C.; JOWKAR, N.; KAZI, A.; HAOUCHINE, N.; CHEEMA, H.; NAVAB, N.; PIEPER, S.;
+  WELLS, W.~M.; BI, W.~L.; GOLBY, A.; FRISKEN, S.; KAPUR, T. \textbf{The Brain
+  Resection Multimodal Imaging Database (ReMIND) (Version 1)}. The Cancer
+  Imaging Archive, 2023.
+Dispon{\'\i}vel em: \url{https://doi.org/10.7937/3RAG-D070}.}
+
+\bibitem[Li \textit{et al.} 2020]{imageQuantization}
+\abntrefinfo{Li \textit{et al.}}{LI \textit{et al.}}{2020}
+{LI, Y.; XU, Z.; LIU, X.; SASI, G.; BALAJI, M. S.~P.; JEGADEESAN, N.; DEVASENA,
+  L.; BALAJI, V.~S.; ELAMARAN, V. Exploring digital image dithering techniques
+  on a broken foot image.
+\textbf{Journal of Medical Imaging and Health Informatics}, v.~10, n.~9, p.
+  2247--2251, 2020.
+ISSN 2156-7018.
+Dispon{\'\i}vel em:
+  \url{https://www.ingentaconnect.com/content/asp/jmihi/2020/00000010/00000009/art00045}.}
+
+\bibitem[Library 2023]{DICOMTransferSyntax}
+\abntrefinfo{Library}{LIBRARY}{2023}
+{LIBRARY, D. \textbf{DICOM {T}ransfer {S}yntax {UID}s}. 2023.
+Dispon{\'\i}vel em: \url{https://www.dicomlibrary.com/dicom/transfer-syntax/}.}
+
+\bibitem[Marques \textit{et al.} 2007]{marques2007mamografia}
+\abntrefinfo{Marques \textit{et al.}}{MARQUES \textit{et al.}}{2007}
+{MARQUES, J.; HONóRIO, T.; POEL, J.; SOUZA, A.; BATISTA, L. Compressão sem
+  perdas de imagens mamográficas utilizando código gray e algoritmo ppm.
+In:  \underline{\ \ \ \ \ \ \ \ }. [S.l.: s.n.], 2007. v.~18, p. 1216--1220.
+ISBN 978-3-540-74470-2.}
+
+\bibitem[Miano 1999]{miano1999compressed}
+\abntrefinfo{Miano}{MIANO}{1999}
+{MIANO, J. \textbf{Compressed image file formats: Jpeg, png, gif, xbm, bmp}.
+  [S.l.]: Addison-Wesley Professional, 1999.}
+
+\bibitem[NEMA 2016]{DICOM}
+\abntrefinfo{NEMA}{NEMA}{2016}
+{NEMA. \textbf{DICOM PS3.1 - Introduction and Overview}. 2016.
+Dispon{\'\i}vel em:
+  \url{https://dicom.nema.org/medical/dicom/2016a/output/pdf/part01\_changes.pdf}.}
+
+\bibitem[Pedregosa \textit{et al.} 2011]{sklearnDocumentation}
+\abntrefinfo{Pedregosa \textit{et al.}}{PEDREGOSA \textit{et al.}}{2011}
+{PEDREGOSA, F.; VAROQUAUX, G.; GRAMFORT, A.; MICHEL, V.; THIRION, B.; GRISEL,
+  O.; BLONDEL, M.; PRETTENHOFER, P.; WEISS, R.; DUBOURG, V.; VANDERPLAS, J.;
+  PASSOS, A.; COURNAPEAU, D.; BRUCHER, M.; PERROT, M.; DUCHESNAY, E.
+  \textbf{scikit-learn: Machine Learning in Python}. 2011. 2825--2830~p.
+Dispon{\'\i}vel em: \url{https://scikit-learn.org/stable/}.}
+
+\bibitem[Santo 2012]{santos2012PCACompression}
+\abntrefinfo{Santo}{SANTO}{2012}
+{SANTO, R. do E. Utilização da análise de componentes principais na
+  compressão de imagens digitais.
+\textbf{einstein (São Paulo)}, v.~10, n.~2, p. 135--139, 2012.
+ISSN 1679-4508.
+Dispon{\'\i}vel em:
+  \url{https://journal.einstein.br/article/principal-component-analysis-applied-to-digital-image-compression/}.}
+
+\bibitem[Sayood 2006]{dataCopressionSayood}
+\abntrefinfo{Sayood}{SAYOOD}{2006}
+{SAYOOD, K. \textbf{Introduction to Data Compression}. [S.l.]: Academic Press,
+  2006.}
+
+\bibitem[Silva e Costa 2011]{imageDicomMetadata}
+\abntrefinfo{Silva e Costa}{SILVA; COSTA}{2011}
+{SILVA, L. A.~B.; COSTA, C. M.~A. \textbf{Medical imaging services supported on
+  cloud}. Aveiro: L. Silva, 2011. Dispon{\'\i}vel em:
+  \url{http://hdl.handle.net/10773/7245}.}
+
+\bibitem[Sousa 2015]{sousa2015compressaoTempoReal}
+\abntrefinfo{Sousa}{SOUSA}{2015}
+{SOUSA, R. C.~A. de.
+\textbf{Compress{\~a}o de imagens com transmiss{\~a}o em tempo real}.
+Tese (Doutorado) --- Universidade Federal do Rio Grande do Norte, 2015.}
+
+\bibitem[Stiny 2015]{imageDicom}
+\abntrefinfo{Stiny}{STINY}{2015}
+{STINY, A. \textbf{'Battlefield MRI' in the works - Navy Times}. 2015.
+[Online; accessed 5-June-2024].
+Dispon{\'\i}vel em:
+  \url{https://www.navytimes.com/news/your-navy/2015/06/04/battlefield-mri-in-the-works/}.}
+
+\bibitem[Stolfi e Campos 2000]{stolfi2000MedicalCompression}
+\abntrefinfo{Stolfi e Campos}{STOLFI; CAMPOS}{2000}
+{STOLFI, G.; CAMPOS, G. L.~d. Processos de compress{\~a}o de dados aplicados a
+  imagens m{\'e}dicas.
+2000.}
+
+\bibitem[Veikutis \textit{et al.} 2023]{imageRgbGrayscale}
+\abntrefinfo{Veikutis \textit{et al.}}{VEIKUTIS \textit{et al.}}{2023}
+{VEIKUTIS, V.; BRAZDZIUNAS, M.; KELERAS, E.; BASEVICIUS, A.; GRIB, A.;
+  SKAUDICKAS, D.; LUKOSEVICIUS, S. Diagnostic approaches to adult-type diffuse
+  glial tumors: Comparative literature and clinical practice study.
+\textbf{Current Oncology}, v.~30, n.~9, p. 7818--7835, 2023.
+ISSN 1718-7729.
+Dispon{\'\i}vel em: \url{https://www.mdpi.com/1718-7729/30/9/568}.}
+
+\bibitem[Ziv e Lempel 1977]{lempelZivArticle}
+\abntrefinfo{Ziv e Lempel}{ZIV; LEMPEL}{1977}
+{ZIV, J.; LEMPEL, A. A universal algorithm for sequential data compression.
+\textbf{IEEE Transactions on information theory}, IEEE, v.~23, n.~3, p.
+  337--343, 1977.}
+
+\end{thebibliography}

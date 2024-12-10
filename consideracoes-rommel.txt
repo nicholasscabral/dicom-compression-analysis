@@ -1,0 +1,35 @@
+PÁG 15
+1.4 - ACHEI BEM LEGAL AS QUESTÕES DE PESQUISA
+
+PÁG 19
+2.1.1 Taxa de compressão (Fig 11, 12, 13)
+
+PÁG 21, 11
+Colocar referência antes de fórmulas, como no PSNR, DCT
+O VALOR MÁXIMO na fórmula do PSNR é o maior valor de pixel?
+
+Descreveu muito bem o algoritmo de Huffman, citando complexidade de tempo e espaço
+
+PÁG 36
+Colocar tabela comparativa das complexidades de tempo e espaço dos algoritmos de compressão PNG, JPEG, PCA
+
+PÁG 37
+Há muito trabalhos relacionados recentes que poderia ter sido colocados:
+
+- Versatile approaches for medical image compression: A review
+- An efficient medical image compression technique for telemedicine systems
+- IntOPMICM: intelligent medical image size reduction model
+
+PÁG 41
+Faltou fazer descrição da metodologia (explicativa ou não, quantitativa, qualitativa..)
+4. Você poderia colocar uma referência ou URL do TCIA. É uma referência que a literatura que trata de compressão de imagens leva em consideração? Se sim, relatar.
+
+4.1.2 - mudar o nome da seção para "pré-processamento dos dados" / "filtragem de dados"
+
+PÁG 45
+4.2.3. Como você categorizou essas faixas? Há um consenso na literatura sobre essa classificação?
+
+Seção dos resultados:
+colocar um desvio padrão no PSNR?
+tempo de compressão? custoso?
+

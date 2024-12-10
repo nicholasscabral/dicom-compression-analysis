@@ -1,0 +1,23 @@
+\chapter{Conclusão}
+\label{cap:conclusao}
+
+Neste trabalho, foi realizada uma análise comparativa de três métodos de compressão de imagens médicas no formato \acrshort{DICOM}: \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA}. O estudo investigou o impacto desses algoritmos na redução do tamanho dos arquivos e na preservação da qualidade das imagens médicas, considerando três tipos de órgãos: pulmão, mama e cérebro. Os resultados demonstraram diferenças significativas entre os métodos, evidenciando vantagens e limitações que dependem tanto das características dos algoritmos quanto do conteúdo das imagens.
+
+As questões de pesquisa levantadas foram abordadas de maneira detalhada. Primeiramente, quanto às taxas médias de compressão alcançadas pelos algoritmos, o \acrshort{JPEG} obteve os melhores resultados, superando 96\% em todos os órgãos analisados. O \acrshort{PNG} apresentou taxas moderadas e consistentes de 83-86\%, conciliando uma alta taxa de compressão com preservação total da qualidade. Já o \acrshort{PCA} demonstrou um desempenho variável, dependendo do percentual de variância explicada, sendo mais eficiente em cenários onde a retenção parcial da informação é aceitável.
+
+Sobre o impacto das características das imagens de cada órgão nas taxas de compressão, foi constatado que imagens de pulmão, devido às suas grandes áreas homogêneas, favoreceram a compressão em todos os algoritmos, resultando nas melhores taxas. Por outro lado, as imagens de mama, com maior densidade de detalhes, apresentaram maior resistência à compressão. As imagens de cérebro, por sua vez, exibiram comportamento intermediário, refletindo sua composição equilibrada entre áreas homogêneas e detalhadas.
+
+Em relação ao impacto da variação da taxa de compressão na qualidade visual, os valores de \acrshort{PSNR} demonstraram que o \acrshort{PNG} manteve a qualidade perfeita das imagens, com \acrshort{PSNR} tendendo ao infinito. O \acrshort{JPEG} apresentou valores entre 42 e 45 dB, indicando alta qualidade visual com perdas imperceptíveis a olho nu. Já o \acrshort{PCA}, dependendo do percentual de variância explicada, teve qualidade mais variável, com melhores resultados observados em níveis mais altos (99\%).
+
+Finalmente, no que diz respeito à escolha do algoritmo ideal para cada cenário, conclui-se que o \acrshort{JPEG} oferece o melhor equilíbrio entre compressão e qualidade visual, sendo uma opção eficiente para armazenamento em larga escala. O \acrshort{PNG} é recomendado para aplicações que exigem preservação total da qualidade, enquanto o \acrshort{PCA} é mais indicado para cenários onde a flexibilidade na retenção de dados é prioritária, apesar de seu maior custo computacional.
+
+Este estudo contribui para o entendimento das particularidades de cada método de compressão e oferece subsídios para a escolha de estratégias adequadas em diferentes cenários hospitalares. Como trabalhos futuros, sugere-se:
+\begin{itemize}
+    \item Avaliar outros algoritmos de compressão, como \acrshort{AVIF} e \acrshort{SPIHT}, que também são amplamente utilizados em imagens médicas e científicas.
+    \item Explorar métodos baseados em aprendizado de máquina, como compressão neural.
+    \item Investigar o impacto da compressão na acurácia de diagnósticos realizados a partir dessas imagens com o auxílio de um profissional da saúde especializado em diagnóstico de imagens médicas.
+    \item Ampliar o estudo para outros tipos de exames médicos, como ressonância magnética e ultrassonografia, a fim de verificar se os resultados observados neste trabalho se mantêm em outros contextos.
+\end{itemize}
+
+Com base nos resultados obtidos, conclui-se que a compressão de imagens médicas, quando bem planejada, pode oferecer soluções eficazes para os desafios de armazenamento em ambientes hospitalares, conciliando redução de tamanho e preservação da integridade das informações essenciais ao diagnóstico.
+

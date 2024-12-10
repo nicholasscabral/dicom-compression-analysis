@@ -1,0 +1,83 @@
+\chapter{Introdução}
+\label{cap:intro}
+
+No âmbito da medicina, a obtenção e preservação de imagens de tomografia são desafios prementes. Por serem algo fundamental para os processos de análises radiológicas, é imprescindível que essas imagens tenham boa nitidez e praticidade de armazenamento. Com isso, a adoção do formato \acrfull{DICOM}
+\cite{DICOM} como padrão internacional de imagens médicas aprimorou a forma como os hospitais lidam com as tomografias. O uso dessas imagens no cenário hospitalar, onde a complexidade dessas pode variar amplamente, resulta em arquivos que, em escala, podem sobrecarregar os sistemas de armazenamento dos hospitais. Este estudo compara métodos de compressão modernos para identificar formas eficientes de se armazenar essas imagens em diferentes cenários. 
+
+\section{Definição do Problema}
+\label{intro:prob}
+
+A problemática essencial reside no gerenciamento eficaz de dados em ambientes hospitalares, onde várias tomografias são armazenadas, o que pode gerar um impacto substancial à infraestrutura digital dos hospitais. O volume crescente de dados gerados diariamente requer uma abordagem adaptativa para mitigar os desafios associados ao armazenamento e ao custo monetário elevado. Este estudo procura evidenciar \textbf{como diferentes métodos de compressão performam em diferentes cenários}, destacando suas vantagens e limitações, com o objetivo de compreender o impacto na integridade dos dados e auxiliar na escolha adequada para diferentes contextos de armazenamento.
+
+\section{Motivação e Relevância}
+\label{intro:motiv}
+
+Este estudo é motivado pela necessidade de avaliar como diferentes métodos de compressão podem reduzir eficientemente o tamanho das imagens de tomografia, considerando o impacto na qualidade e identificando o equilíbrio entre compressão e preservação visual, tendo em vista sua importância na prática clínica. A tomografia desempenha um papel fundamental no diagnóstico e monitoramento de diversas condições médicas, e a compressão dessas imagens torna-se crucial para a manutenibilidade da infraestrutura digital dos hospitais. A relevância desta problemática está intrinsecamente ligada à crescente necessidade de tecnologias que melhorem o armazenamento e otimizem os recursos, visando eficiência e redução de custos. Ao comparar abordagens de compressão, temos como objetivo encontrar a forma que consiga conciliar uma alta taxa de compressão com uma baixa taxa de perda. Este estudo almeja ser uma contribuição para aprimorar a gestão de imagens de tomografia em ambientes hospitalares de grande escala.
+
+\section{Objetivos}
+\label{intro:objet}
+
+O objetivo geral deste estudo é analisar o desempenho dos métodos de compressão \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA} na redução do tamanho de imagens \acrshort{DICOM}, considerando diferentes tipos de órgãos (pulmão, mama e cérebro). A análise é realizada por meio da comparação das taxas de compressão e da perda de qualidade, buscando compreender como cada método concilia a redução do tamanho (em bytes) com a preservação da integridade das informações, em diferentes contextos de aplicação.
+
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+    \item Obter uma base de dados com imagens de tomografias.
+    \item Implementar algoritmos modernos de compressão de imagens como \acrfull{PNG}, \acrfull{JPEG} e \acrfull{PCA}.
+    \item Realizar um estudo comparativo entre os algoritmos citados acima.
+    \item Investigar a relação entre as taxas de compressão e perda de qualidade de cada método.
+    \item Identificar os cenários de armazenamento em que cada um dos métodos de compressão se mostra mais adequado, considerando as necessidades de eficiência no uso de espaço e preservação da qualidade das imagens médicas para diferentes tipos de órgãos.
+    \item Explicar como cada órgão apresenta diferentes taxas de compressão, destacando as variações no desempenho dos métodos de compressão em função das características específicas de cada imagem.
+\end{enumerate}
+
+\section{Questões de Pesquisa}
+\label{intro:questp}
+
+% \begin{enumerate}
+%     \item Quais são as taxas de compressão alcançadas pelos algoritmos \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA} para imagens médicas de diferentes orgãos?
+%     \item Quais métricas são adequadas para medir a perda de informações nas imagens após a compressão, e como essas métricas se aplicam aos diferentes algoritmos investigados?
+%     \item De que forma a taxa de compressão impacta a qualidade visual das imagens de tomografia, considerando as características específicas de cada método de compressão?
+% \end{enumerate}
+
+\begin{enumerate}
+    \item Quais são as taxas médias de compressão alcançadas pelos algoritmos \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA} em imagens médicas de pulmão, mama e cérebro?
+    \item Como as características das imagens de cada órgão (pulmão, mama e cérebro) influenciam as taxas de compressão dos algoritmos \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA}?
+    \item Como a variação da taxa de compressão impacta a qualidade visual das imagens de tomografia, considerando o \acrfull{PSNR} como métrica de avaliação?
+    \item Qual algoritmo oferece o melhor equilíbrio entre compressão e qualidade visual para cada órgão, considerando os resultados de \acrshort{PSNR} e taxa de compressão?
+\end{enumerate}
+
+% \section{Contribuições do Trabalho}
+% \label{intro:contr}
+% \textbf{----- !!! FAZER DEPOIS !!! -----} 
+% Texto indicando as contribuições do trabalho.
+% \begin{enumerate}
+%     \item \textbf{Avanço em pesquisas médicas:} \BlankLine
+%     Ao oferecer uma análise detalhada e comparativa de métodos de compressão, o estudo contribui para o avanço da pesquisa médica, fornecendo insights sobre a eficácia desses métodos no contexto de armazenamento. O resultado dessa comparação pode orientar pesquisadores na escolha de métodos adequados para suas investigações.
+    
+%     \item \textbf{Aplicações de aprendizado de máquina:} \BlankLine
+%     Muitas aplicações baseadas em IA dependem de grandes conjuntos de dados, incluindo imagens médicas. Imagens comprimidas facilitam o treinamento e a implantação mais rápidos de modelos. Pesquisadores e desenvolvedores que trabalham em algoritmos de IA para detecção, segmentação e classificação de doenças podem se beneficiar do armazenamento otimizado dessas imagens.
+
+%     \item \textbf{Otimização de recursos:} \BlankLine
+%     Hospitais e clínicas lidam diariamente com enormes quantidades de imagens médicas. A adoção de técnicas de compressão otimizadas pode resultar em economia significativa nos custos de armazenamento. Ao evidenciar o método mais eficiente dentre os mencionados acima, instituições de saúde podem se basear nesse resultado para a escolha do método de compressão mais adequado às suas necessidades específicas.
+% \end{enumerate}
+
+\section{Organização do Trabalho}
+\label{intro:organ}
+% \textbf{----- !!! FAZER DEPOIS !!! -----} O restante do trabalho está organizado nas seguintes seções. Na Capítulo~\ref{cap:fundamentacao-teorica}, apresenta-se a fundamentação teórica deste trabalho ...
+O restante do trabalho está organizado nas seguintes seções:
+\begin{itemize}
+    \item No Capítulo~\ref{cap:fundamentacao-teorica}, são explorados os fundamentos teóricos essenciais da compressão de dados, uma área importante na ciência da computação e na transmissão eficiente de informações. São abordados os dois principais paradigmas de compressão: com perda e sem perda, discutindo os princípios subjacentes, as aplicações relevantes e as métricas comumente usadas para avaliar a eficácia de cada abordagem. O objetivo é fornecer uma base sólida para a análise detalhada dos algoritmos específicos de compressão e sua aplicação no contexto de otimização de imagens médicas.
+
+    \item No Capítulo~\ref{cap:relac}, são discutidos estudos anteriores e pesquisas relevantes sobre a aplicação de técnicas de compressão de imagens em diferentes cenários, com ênfase no armazenamento de imagens de tomografia. A revisão da literatura existente identifica avanços, desafios e lacunas, contextualizando o estudo dentro do panorama atual da área e justificando a escolha dos algoritmos e metodologias utilizadas.
+
+    \item No Capítulo~\ref{cap:metod}, são descritas detalhadamente as etapas e procedimentos adotados para a compressão de imagens de tomografia, incluindo a coleta de dados, a implementação dos algoritmos de compressão, a análise comparativa entre eles e a medição da perda de informações. São explicadas as ferramentas e técnicas utilizadas, justificadas as escolhas metodológicas e discutidas as considerações éticas e práticas associadas ao manejo dos dados de tomografia.
+
+    \item No Capítulo~\ref{cap:resultados}, são apresentados os resultados obtidos, incluindo as taxas de compressão e de perda de qualidade alcançadas pelos algoritmos \acrshort{PNG}, \acrshort{JPEG} e \acrshort{PCA}. É analisada a perda de informações associada a cada método e seu impacto na qualidade das imagens, identificando os cenários mais adequados para a aplicação de cada técnica. Os dados obtidos são discutidos de maneira quantitativa e qualitativa, com gráficos e tabelas para ilustrar as descobertas.
+
+    \item No Capítulo~\ref{cap:conclusao}, são apresentadas as conclusões finais, resumindo os principais achados e destacando as contribuições do estudo para a área de compressão de dados em imagens médicas. São discutidas as limitações encontradas durante a pesquisa e sugeridas direções para futuras investigações, com recomendações para o aprimoramento das técnicas de compressão e novas abordagens para a solução dos problemas identificados.
+\end{itemize}
+
+
+    % \item \textbf{Capítulo 1 - Introdução}:
+    %  Neste capítulo introdutório, apresentamos a definição do problema relacionado ao gerenciamento eficaz de dados em ambientes hospitalares, focando na necessidade de armazenamento eficiente de imagens de tomografia. Discutimos a motivação e relevância do estudo, destacando a importância da compressão de dados para melhorar o armazenamento e transmissão dessas imagens. Os objetivos gerais e específicos são delineados, assim como as questões de pesquisa que nortearam a investigação. Detalhamos a metodologia adotada, as contribuições esperadas para a área e a estrutura do documento, proporcionando uma visão clara do conteúdo e da abordagem do trabalho.
+
+

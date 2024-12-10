@@ -1,0 +1,21 @@
+\babel@toc {brazil}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de compressão de imagem.\relax }}{18}{figure.caption.10}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Comparação entre diferentes taxas de compressão\relax }}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Comparação entre compressão com e sem perda\relax }}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Comparação entre diferentes níveis de quantização\relax }}{24}{figure.caption.13}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Visualização de uma imagem em escala de cinza e \acrshort {RGB}\relax }}{25}{figure.caption.14}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Metadados de uma imagem \acrshort {DICOM}\relax }}{26}{figure.caption.15}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Visualização de uma imagem \acrshort {DICOM}\relax }}{27}{figure.caption.16}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Árvore de Huffman para uma sequência de caracteres aleatórios\relax }}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Compressão de imagem com \acrshort {PNG}\relax }}{32}{figure.caption.18}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Fluxo de compressão e descompressão do \acrshort {JPEG}\relax }}{33}{figure.caption.19}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Comparação visual das imagens de pulmão: original e comprimidas por \acrshort {PNG}, \acrshort {JPEG} e \acrshort {PCA}.\relax }}{48}{figure.caption.21}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Comparação visual das imagens de mama: original e comprimidas por \acrshort {PNG}, \acrshort {JPEG} e \acrshort {PCA}.\relax }}{49}{figure.caption.22}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Comparação visual das imagens de cérebro: original e comprimidas por \acrshort {PNG}, \acrshort {JPEG} e \acrshort {PCA}.\relax }}{50}{figure.caption.23}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Taxas médias de compressão por tipo de órgão e método de compressão.\relax }}{51}{figure.caption.24}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Taxas médias de compressão \acrshort {PNG} por tipo de órgão.\relax }}{52}{figure.caption.25}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Taxas médias de compressão \acrshort {JPEG} por tipo de órgão.\relax }}{52}{figure.caption.26}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Taxas médias de compressão por tipo de órgão para o \acrshort {PCA} (95\% de variância explicada).\relax }}{53}{figure.caption.27}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Taxas médias de compressão por tipo de órgão para o \acrshort {PCA} (97,5\% de variância explicada).\relax }}{54}{figure.caption.28}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Taxas médias de compressão por tipo de órgão para o \acrshort {PCA} (99\% de variância explicada).\relax }}{54}{figure.caption.29}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Valores médios de \acrshort {PSNR} por algoritmo e tipo de órgão.\relax }}{55}{figure.caption.30}%
